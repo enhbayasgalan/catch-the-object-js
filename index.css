@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+}
+.gameCont{
+    margin-top: 30px;
+    width: 1000px;
+    height: 1000px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.fruit{
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 60px;
+    height: 75px;
+    /* background-color: red; */
+    background-size: cover;
+}
+.hidden{
+    display: none;
+}
+.animate{
+    animation: float 2s linear infinite;
+}
+.apple{
+    background-image: url("./apple.png");
+}
+.strawberry{
+    background-image: url("./strawberry.png");
+}
+.banana{
+    background-image: url("./banana.png");
+}
+.cherry{
+    background-image: url("./cherry.png");
+}
+@keyframes float{
+    0%{top:0px}
+    100%{top:1000px}
+}
