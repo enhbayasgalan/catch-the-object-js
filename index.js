@@ -31,11 +31,23 @@ cherry.classList.add("cherry");
 cherry.classList.add("hidden");
 const fruit = document.getElementsByClassName("fruit");
 
+const poo = document.createElement("div");
+gameCont.appendChild(poo);
+poo.classList.add("fruit");
+poo.classList.add("pooImage");
+poo.classList.add("hidden");
+const bombPoo= document.getElementsByClassName("fruit");
+
 let random = Math.floor(Math.random() * 950);
 let i = 0;
 fruit[0].style.left = random + "px";
 
+let randomPoo = Math.floor(Math.random() * 950);
+let k = 0;
+poo.style.left = random + "px";
+
 setInterval(fruitFall, 2000);
+setInterval(bombs, 5000);
 
 function fruitFall() {
   fruit[i].classList.remove("animate");
@@ -46,4 +58,14 @@ function fruitFall() {
   fruit[i].classList.remove("hidden");
   fruit[i].style.left = random + "px";
   
+}
+
+function bombs() {
+    poo.classList.remove("animate");
+    poo.classList.add("hidden");
+    let randomPoo = Math.floor(Math.random() * 950);
+    poo.classList.add("animate");
+    poo.classList.remove("hidden");
+    poo.style.left = randomPoo + "px";
+    setTimeout(remover => {poo.classList.remove("animate"), poo.classList.add("hidden");}, 2000)
 }

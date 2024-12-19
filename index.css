@@ -29,6 +29,7 @@
 .animate {
   animation: float 2s linear infinite;
 }
+
 .apple {
   background-image: url("./apple.png");
 }
@@ -40,6 +41,9 @@
 }
 .cherry {
   background-image: url("./cherry.png");
+}
+.pooImage {
+    background-image: url("./poo.png");
 }
 @keyframes float {
   0% {
